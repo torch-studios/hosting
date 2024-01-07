@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Strona z tłem i przyciskami</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('image.png');
+      background-size: cover;
+      background-position: top left;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    header {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    header img {
+      width: 100px;
+      height: auto;
+    }
+
+    .buttons {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+    }
+
+    .buttons button {
+      padding: 10px 20px;
+      margin-bottom: 10px;
+      font-size: 18px;
+      background-color: #db34bf;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .modal {
+      background-image: url('prices.png');
+      padding: 300px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Logo">
+  </header>
+
+  <div class="buttons">
+    <button onclick="window.location.href='https://discord.com'">Discord</button>
+    <button onclick="showPrices()">Prices</button>
+  </div>
+
+  <div class="modal" id="modal" style="display: none;">
+    <!-- Treść modala z cenami -->
+    <!-- Zdjęcie prices.png będzie użyte jako tło modala -->
+  </div>
+
+  <script>
+    function showPrices() {
+      var modal = document.getElementById('modal');
+      modal.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
